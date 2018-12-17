@@ -113,8 +113,8 @@ public class RoundRobin {
             String name = input.next();// name of the process
             System.out.print("Arrival Time of process #" + (i+1) + ": ");
             int at = input.nextInt(); // arrival time
-            System.out.print("Burst time of process #" + (i+1) + ": ");
-            int bt = input.nextInt(); // burst time 
+            System.out.print("Burst  of process #" + (i+1) + ": ");
+            int bt = input.nextInt(); // burst time
             queue.add(new Process(name, at, bt));
             sum += bt;
         }
