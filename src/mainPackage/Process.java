@@ -1,38 +1,31 @@
 package mainPackage;
 
-/**
- *
- * @author Eldeeb
- */
-public class Process implements Comparable<Process> {
 
-       public String name;
-        public double burst_time;
-        public int arrival_time;
-        public int waiting_time;
-        public int turnaround_time;
+public class Process {
+	public String name;
+	public Integer arrivalTime;
+	public Integer burstTime;
+	public Integer priority;
+	public double quantum;
+	public Integer waitingTime;
+	public Integer turnAroundTime;
+	public Integer remainingTime;
+	public Integer finishTime;
 
-        public Process() {
-            this.burst_time = 0;
-            this.arrival_time = 0;
-            this.name = "is not named";
-            this.waiting_time = 0;
-            this.turnaround_time=0;
-        }
+	public Process() {
+		this.arrivalTime = 0;
+		this.burstTime = 0;
+		this.priority = 0;
+		this.waitingTime = 0;
+		this.turnAroundTime = 0;
+		this.remainingTime = 0;
+		this.finishTime = 0;
+		}
+	
+		@Override
+	public String toString() {
+            return "Process [name=" + name + ", arrivalTime=" + arrivalTime + ", burstTime=" + burstTime + ", priority=" + priority + ", waitingTime=" + waitingTime + ", turnAroundTime=" + turnAroundTime + ", remainingTime="
+			+ remainingTime + ", finishTime=" + finishTime + "]";
+	}
 
-        public Process(String n, int at, int bt) {
-            this.name = n;
-            this.arrival_time = at;
-            this.burst_time = bt;
-            this.waiting_time = 0;
-            this.turnaround_time = bt;
-
-        }
-
-       
-        
-        @Override
-        public int compareTo(Process process) {
-                return (int) (arrival_time- process.arrival_time);
-        }
-    }
+}
